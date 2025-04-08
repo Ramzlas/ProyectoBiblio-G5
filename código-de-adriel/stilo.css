@@ -1,0 +1,45 @@
+#carrito{
+    width: 18rem; 
+    top: 55px; 
+    position: absolute; 
+    right: 0%;
+}
+#tabla{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+th{
+    width: 33%;
+}
+#cara{
+    margin-top: 0%;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+table{
+    width: 100%;
+    margin-left: 0px;
+    padding-left: 0%;
+    left: 0%;
+}
+tr{
+    margin-left: 0%;
+}
+#aPagar{
+    background-color: black;
+    color: white;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 1px;
+    padding-bottom: 2px;
+}
+.pa{
+    border: 1px solid black;
+}
+.do{
+    margin-left: 3px;
+}
