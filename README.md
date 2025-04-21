@@ -23,7 +23,7 @@ Esta aplicación permite buscar, visualizar y agregar libros a un carrito de com
 - [Ramiro Nicolás Díaz](https://github.com/ramzlas)
 - [Adriel Lopito](https://github.com/ramzlas)
 - [Franco Videla](https://github.com/ramzlas)
-- [Gonzalo Almada](https://github.com/ramzlas)
+- [Facundo Almada](https://github.com/ukcaf)
 - [Juan Cruz Rodriguez](https://github.com/ramzlas)
 - [Teo Hermann](https://github.com/ramzlas)
 - [Geronimo Hermann](https://github.com/ramzlas)
