@@ -1,29 +1,67 @@
-# Proyecto de venta con catálogo de Libros 📚
-Proyecto desarrollado por el **Grupo 5** para la materia de Desarrollo de Software - UNAB.
+# Biblio 📚
+
+Aplicación desarrollada por el **Grupo 5** para la materia **Desarrollo de Software** en la **Universidad Nacional Guillermo Brown (UNAB)**.
+
+---
 
 ## 💡 Descripción
 
-Esta aplicación permite buscar, visualizar y agregar libros a un carrito de compras. bla bla bla...
+**Biblio** es una aplicación web que permite explorar un catálogo visual de libros a través de tarjetas estilizadas, con diseño responsive. Se trata de un prototipo funcional orientado a prácticas de maquetado, diseño y organización de una librería digital. Está construida con HTML, CSS.
 
-## 🚀 Funcionalidades
+---
 
-- bla bla
-- bla bla
-- bla bla
-- bla bla
+## 🚀 Funcionalidades implementadas
 
-## 📁 Estructura
+- Menú de navegación fijo con enlaces internos.
+- Sección de presentación del equipo ("Sobre nosotros").
+- Catálogo visual de libros en formato tarjeta.
+- Efectos visuales y animaciones suaves con CSS.
+- Estética amigable y profesional con paleta personalizada.
+- Pie de página con navegación y contacto por email.
 
-- `index.html`: Página principal.
-- `stilo.css`: Estilos personalizados.
-- `script.js`: Lógica del frontend para interacción y carrito.
+---
+
+## 📁 Estructura del proyecto
+
+- `index.html`: Página principal con secciones "Sobre nosotros" y "Libros".
+- `styles.css`: Estilos visuales personalizados (colores, tipografía, diseño responsive).
+
+---
 
 ## 🧑‍💻 Integrantes
 
-- [Ramiro Nicolás Díaz](https://github.com/ramzlas)
-- [Adriel Lopito](https://github.com/ramzlas)
-- [Franco Videla](https://github.com/ramzlas)
-- [Facundo Almada](https://github.com/ukcaf)
-- [Juan Cruz Rodriguez](https://github.com/ramzlas)
-- [Teo Hermann](https://github.com/ramzlas)
-- [Geronimo Hermann](https://github.com/ramzlas)
+| Integrante   | Rol              | Área              | Tarea específica                                                  |
+|--------------|------------------|-------------------|-------------------------------------------------------------------|
+| [Juan Cruz Rodriguez](https://github.com/ramzlas) | Documentación    | Documentación     | Redactar la documentación general                                |
+| [Franco Videla](https://github.com/ramzlas)       | Documentación    | Documentación     | Redactar la documentación general                                |
+| [Adriel Lopito](https://github.com/ramzlas)       | Programación     | Backend/Frontend  | Maquetado y estilo (HTML/CSS) y Scripts en JavaScript            |
+| [Ramiro Nicolás Díaz](https://github.com/ramzlas) | Programación     | Backend/Frontend  | Maquetado y estilo (HTML/CSS) y base de datos (PostgreSQL)       |
+| [Facundo Almada](https://github.com/ukcaf)        | Programación     | Frontend          | Maquetado y estilo (HTML/CSS)                                     |
+| [Teo Hermann](https://github.com/ramzlas)         | Programación     | Frontend          | Maquetado y estilo (HTML/CSS)                                     |
+| [Geronimo Hermann](https://github.com/ramzlas)    | Soporte técnico  | Biblioteca externa| Buscar/gestionar librerías                                        |
+
+---
+
+## 🗂️ Estado del proyecto
+
+> 🟡 **Versión inicial:** Contiene la estructura HTML, maquetado visual con CSS y prototipo del catálogo. En desarrollo futuras funciones con JavaScript y conexión a base de datos.
+
+---
+
+## 📌 Requisitos
+
+- Navegador web moderno (Chrome, Firefox, Edge, etc.)
+- Editor de código (recomendado: Visual Studio Code)
+- (Opcional) Extensión **Live Server** para pruebas locales
+
+---
+
+## 📬 Contacto
+
+Para consultas, escribir a: [contacto@libreriavirtual.com](mailto:contacto@libreriavirtual.com)
+
+---
+
+## 🔖 Licencia
+
+Este proyecto forma parte del trabajo práctico de la carrera de **Tecnicatura en Programación** - UNAB. Uso académico exclusivo por el **Grupo 5**.
