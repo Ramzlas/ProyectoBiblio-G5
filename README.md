@@ -44,9 +44,18 @@ Aplicación desarrollada por el **Grupo 5** para la materia **Desarrollo de Soft
 
 ## 🗂️ Estado del proyecto
 
-> 🟡 **Versión inicial:** Contiene la estructura HTML, maquetado visual con CSS y prototipo del catálogo. En desarrollo futuras funciones con JavaScript y conexión a base de datos.
+> 🌱 **Versión 1.0 - Estructura inicial:**  
+> Contiene la estructura HTML, el maquetado visual con CSS como prototipo básico del catálogo.  
+> Se encuentra en desarrollo para agregar JavaScript y la conexión a base de datos.
 
----
+> 🟡 **Versión 2,0 - Interactividad básica:**  
+> Facundo reversiono el modelo inicial con un diseño más estetico y adecuado para biblio.  
+> Mejora las secciones y el desplazado para la experiencia del usuario.
+
+> 🟡 **Versión 3.0 - Conexión a base de datos:**  
+> Implementación inicial de una base de datos para gestionar productos y usuarios.  
+> Se incorpora almacenamiento local y se prepara el entorno para una futura integración con backend.
+
 
 ## 📌 Requisitos
 
