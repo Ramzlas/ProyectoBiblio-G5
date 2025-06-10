@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crear cuenta | Biblio</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+      <div class="logo"> <nav> <a href="{{ url_for('home') }}">📚 Biblio</a></nav></div>
+      <nav>
+        <a href="{{ url_for('catalogo') }}">Catálogo</a>
+        <a href="{{ url_for('suscripcion') }}">Suscribite</a>
+        <a href="{{ url_for('donacion') }}">Doná</a>
+        <a href="{{ url_for('login') }}">Login</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </header>
+
+  <main>
+    <section class="hero" style="padding-bottom: 0px;">
+      <h1>Crear una cuenta</h1>
+      <p>Registrate para ser parte de este proyecto.</p>
+    </section>
+
+    <section class="contenido">
+      <form class="login-form" method="POST" enctype="multipart/form-data">
+        {% with mensajes = get_flashed_messages(with_categories=true) %}
+          {% if mensajes %}
+            {% for categoria, mensaje in mensajes %}
+              <div class="alert alert-{{ 'danger' if categoria == 'error' else 'success' }} alert-dismissible fade show" role="alert">
+                <pre style="margin: 0; white-space: pre-line;">{{ mensaje }}</pre>
+              </div>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+        <input type="text" name="nombre" placeholder="Nombre completo" required />
+        <input type="email" name="email" placeholder="Correo electrónico" required />
+        <input type="password" name="contrasena" placeholder="Contraseña" required />
+        <input type="password" name="confirmar" placeholder="Confirmar contraseña" required />
+        <input type="file" accept="image/*" name="imagen" id="imagenInput" />
+      
+        <!-- Vista previa de imagen -->
+        <img id="previewImagen" src="" alt="Vista previa" style="max-width: 500px; display: none; margin-top: 10px;" />
+      
+        <button type="submit">Registrarme</button>
+      </form>
+      <div style="text-align: center; margin-top: 1rem;">
+        <p>¿Ya tenés cuenta?</p>
+        <a href="{{ url_for('login') }}" class="btn-sm">Iniciar sesión</a>
+      </div>
+    </section>
+  </main>
+  <script>
+    const inputImagen = document.getElementById('imagenInput');
+    const preview = document.getElementById('previewImagen');
+  
+    inputImagen.addEventListener('change', function() {
+      const archivo = this.files[0];
+      if (archivo) {
+        const lector = new FileReader();
+        lector.onload = function(e) {
+          preview.src = e.target.result;
+          preview.style.display = 'block';
+        }
+        lector.readAsDataURL(archivo);
+      } else {
+        preview.src = '';
+        preview.style.display = 'none';
+      }
+    });
+  </script>
+  <section class="contact" id="contacto">
+    <h2>Contacto</h2>
+    <p>¿Querés escribirnos o hacer una sugerencia?</p>
+    <p>📧 <a href="mailto:hola@biblio.com">hola@biblio.com</a></p>
+  </section>
+  <footer>
+    <p>&copy; 2025 Biblio. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

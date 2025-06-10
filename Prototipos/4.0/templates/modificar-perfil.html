@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modificar Perfil | Biblio</title>
+  <link rel="stylesheet"  href="{{ url_for('static', filename='css/style.css') }}"/>
+</head>
+<body>
+  <header>
+    <div class="logo"> <nav> <a href="{{ url_for('inicio_admin') }}">📚 Biblio</a></nav></div>
+    <nav>
+      <a href="{{ url_for('catalogo_admin') }}">Catálogo</a>
+      <a href="{{ url_for('agregar_libro') }}">Añadir Libros</a>
+      <a href="{{ url_for('perfil') }}">Perfil</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" style="padding-bottom: 0px;">
+      <h1>Modifica tus datos</h1>
+    </section>
+
+    <section class="contenido" style="display: flex; justify-content: center;">
+      <form class="perfil-form" method="POST" enctype="multipart/form-data" style="display: flex; flex-direction: column; width: 500px; gap: 10px; margin: auto 0;">
+        <input type="hidden" name="id" value="{{ usuario.id }}">
+        <input type="text" name="nombre" placeholder="Nombre completo" value="{{ usuario.nombre }}" required />
+        <input type="email" name="email" placeholder="Correo electrónico" value="{{ usuario.email }}" required />
+        <input type="password" name="contraseña" placeholder="Contraseña" required />
+        <input type="password" name="confirmar_contraseña" placeholder="Confirmar contraseña" required />
+        <input type="file" accept="image/*" name="imagen" id="imagenInput" />
+      
+        <!-- Vista previa de la imagen -->
+        {% if usuario.img %}
+          <img id="previewImagen" src="{{ url_for('static', filename=usuario.img) }}" alt="Vista previa" style="max-width: 500px; margin-top: 10px;" />
+        {% else %}
+          <img id="previewImagen" src="" alt="Vista previa" style="max-width: 500px; display: none; margin-top: 10px;" />
+        {% endif %}
+      
+        <div style="display: flex; flex-direction: row; width: 500px; justify-content:space-around;">
+          <button type="submit" class="btn btn-primary">Actualizar Datos</button>
+          <button type="button" onclick="history.back()" class="btn btn-danger">Cancelar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+  <script>
+    const inputImagen = document.getElementById('imagenInput');
+    const preview = document.getElementById('previewImagen');
+  
+    inputImagen.addEventListener('change', function() {
+      const archivo = this.files[0];
+      if (archivo) {
+        const lector = new FileReader();
+        lector.onload = function(e) {
+          preview.src = e.target.result;
+          preview.style.display = 'block';
+        }
+        lector.readAsDataURL(archivo);
+      } else {
+        preview.src = '';
+        preview.style.display = 'none';
+      }
+    });
+  </script>
+  <footer>
+    <p>&copy; 2025 Biblio. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,1 @@
+usuario_actual = {'id': '0', 'img': 'img/usuarios/icono-usuario.jpg', 'nombre': 'ADMIN', 'email': 'admin@admin.com', 'contrasena': 'Admin1147', 'cargo': 'creador'}

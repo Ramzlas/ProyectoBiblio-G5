@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <link rel="stylesheet"  href="{{ url_for('static', filename='css/style.css') }}"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Libros Inicio | Biblio</title>
+</head>
+<body>
+  <header>
+    <div class="logo"> <nav> <a href="{{ url_for('inicio_admin') }}">📚 Biblio</a></nav></div>
+    <nav>
+      <a href="{{ url_for('catalogo_admin') }}">Catálogo</a>
+      <a href="{{ url_for('agregar_libro') }}">Añadir Libros</a>
+      <a href="{{ url_for('perfil') }}">Perfil</a>
+    </nav>
+  </header>
+
+    <main style="display: flex; flex-direction: column; min-height: 100vh; margin: 0;">
+
+        <section class="hero" style="padding-bottom: 0px;">
+          <h1>Libros Inicio</h1>
+          <p>Elige que libros mostrar al inicio</p>
+        </section>
+    
+        <section class="contenido" style="display: flex; justify-content: center;">
+          <form class="changeInicio-form" method="POST" style="display: flex; flex-direction: column; width: 500px; gap: 10px; margin: auto 0;">
+            <input type="text" list="libros" name="libro1" placeholder="Libro N°1" required>
+            <input type="text" list="libros" name="libro2" placeholder="Libro N°2" required>
+            <input type="text" list="libros" name="libro3" placeholder="Libro N°3" required>
+            <input type="text" list="libros" name="libro4" placeholder="Libro N°4" required>
+            <input type="text" list="libros" name="libro5" placeholder="Libro N°5" required>
+          
+            <datalist id="libros">
+              {% for libro in libros %}
+                <option value="{{ libro.titulo }}"></option>
+              {% endfor %}
+            </datalist>
+          
+            {% if mensaje_error %}
+              <p style="color: red; font-weight: bold;">{{ mensaje_error|safe }}</p>
+            {% endif %}
+          
+            <div style="display: flex; flex-direction: row; width: 500px; justify-content:space-around;">
+              <button type="submit" class="btn btn-primary">Listo</button>
+              <button type="button" onclick="history.back()" class="btn btn-danger">Cancelar</button>
+            </div>
+          </form>
+        </section>
+
+    </main>
+  <footer>
+    <p>&copy; 2025 Biblio. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

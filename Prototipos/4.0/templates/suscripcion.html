@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biblio – Tu biblioteca digital</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo"> <nav> <a href="{{ url_for('home') }}">📚 Biblio</a></nav></div>
+    <nav>
+      <a href="{{ url_for('catalogo') }}">Catálogo</a>
+      <a href="{{ url_for('suscripcion') }}">Suscribite</a>
+      <a href="{{ url_for('donacion') }}">Doná</a>
+      <a href="{{ url_for('login') }}">Login</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+
+  <main class="main-content">
+    <section class="hero">
+      <h1>Suscribite a Biblio</h1>
+      <p>Ayudanos a mantener el proyecto gratuito y accedé a beneficios exclusivos 🧡</p>
+    </section>
+
+    <section class="contenido">
+      <ul>
+        <li>✔ Acceso sin publicidad</li>
+        <li>✔ Ebooks exclusivos cada mes</li>
+        <li>✔ Soporte prioritario</li>
+      </ul>
+      <a class="btn" href="#">Suscribirme desde $500</a>
+    </section>
+  </main>
+  
+  <section class="contact" id="contacto">
+    <h2>Contacto</h2>
+    <p>¿Querés escribirnos o hacer una sugerencia?</p>
+    <p>📧 <a href="mailto:hola@biblio.com">hola@biblio.com</a></p>
+  </section>
+  <footer>
+    <p>&copy; 2025 Biblio. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,255 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f4f6f8;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #005f73;
+  color: #fff;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+nav a {
+  margin-left: 1rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.hero {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: #e0fbfc;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.hero .btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: #008891;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.ebooks {
+  padding: 2rem;
+  text-align: center;
+}
+
+.grid {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 180px;
+}
+
+.card h3 {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.btn-sm {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #008891;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.about {
+  background-color: #fff;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.about .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #005f73;
+}
+
+.about p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 1rem;
+}
+.contact {
+  background: #e0fbfc;
+  text-align: center;
+  padding: 2rem;
+}
+
+.contact h2 {
+  font-size: 1.8rem;
+  color: #005f73;
+  margin-bottom: 0.5rem;
+}
+
+.contact a {
+  color: #008891;
+  font-weight: bold;
+  text-decoration: none;
+}
+.search-input {
+  padding: 0.7rem 1rem;
+  width: 300px;
+  max-width: 90%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.catalog-grid {
+  display: grid;
+  gap: 2rem;
+  padding: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  background-color: #f4f6f8;
+}
+
+.ebook-card {
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.ebook-card:hover {
+  transform: scale(1.02);
+}
+
+.ebook-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.ebook-card h3 {
+  margin-top: 0.7rem;
+  font-size: 1.1rem;
+  color: #005f73;
+}
+
+.ebook-card p {
+  margin: 0.3rem 0 0.7rem;
+  color: #666;
+}
+
+.main-content {
+  padding: 2rem;
+  text-align: center;
+}
+
+.contenido {
+  padding: 2rem;
+  text-align: center;
+}
+
+.contenido ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.contenido ul li {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  color: #005f73;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #008891;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 300px;
+  margin: 2rem auto;
+}
+
+.login-form input {
+  padding: 0.7rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+}
+
+.login-form button {
+  background: #008891;
+  color: #fff;
+  border: none;
+  padding: 0.7rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.catalog-grid p {
+  text-align: center;       /* Centra el texto dentro del <p> */
+  width: 100%;              /* Que tome todo el ancho */
+  margin: 0 auto;           /* Centra el elemento horizontalmente */
+  /* Opcionalmente, si querés centrar verticalmente y horizontalmente el contenedor completo: */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+footer {
+  
+  text-align: center;
+  padding: 1rem;
+  background: #005f73;
+  color: #fff;
+  font-size: 0.9rem;
+  margin-top: auto 
+
+}
+
