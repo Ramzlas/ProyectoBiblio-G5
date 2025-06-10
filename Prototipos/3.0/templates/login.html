@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>  
+  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | Biblio</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header>
+    <div class="logo"> <nav> <a href="{{ url_for('home') }}">📚 Biblio</a></nav></div>
+    <nav>
+      <a href="{{ url_for('catalogo') }}">Catálogo</a>
+      <a href="{{ url_for('suscripcion') }}">Suscribite</a>
+      <a href="{{ url_for('donacion') }}">Doná</a>
+      <a href="{{ url_for('login') }}">Login</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+
+  <main> 
+    <section class="hero">
+      <h1>Iniciar sesión</h1>
+      <p>Accedé a tu cuenta para disfrutar todos los beneficios.</p>
+    </section>
+
+    <section class="contenido">
+      <form class="login-form">
+        <input type="email" placeholder="Correo electrónico" required />
+        <input type="password" placeholder="Contraseña" required />
+        <button type="submit">Entrar</button>
+      </form>
+      <div style="text-align: center; margin-top: 1rem;">
+        <p>¿No tenés una cuenta?</p>
+        <a href="{{ url_for('registro') }}" class="btn-sm">Crear cuenta</a>
+      </div>
+    </section>
+
+  </main>
+  <section class="contact" id="contacto">
+    <h2>Contacto</h2>
+    <p>¿Querés escribirnos, colaborar o hacer una sugerencia?</p>
+    <p>📧 <a href="mailto:hola@biblio.com">hola@biblio.com</a></p>
+  </section>
+  <footer>
+    <p>&copy; 2025 Biblio. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

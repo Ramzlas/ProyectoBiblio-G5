@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catálogo | Biblio</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header>
+    <div class="logo"> <nav> <a href="{{ url_for('home') }}">📚 Biblio</a></nav></div>
+    <nav>
+      <a href="{{ url_for('catalogo') }}">Catálogo</a>
+      <a href="{{ url_for('suscripcion') }}">Suscribite</a>
+      <a href="{{ url_for('donacion') }}">Doná</a>
+      <a href="{{ url_for('login') }}">Login</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+
+  <main class="main-content">
+    <section class="hero">
+      <h2>Explorá nuestro catálogo de ebooks</h2>
+      <p>Lecturas gratuitas para todos los gustos 📖</p>
+      <form method="get" action="{{ url_for('catalogo') }}">
+        <input
+          type="text"
+          name="q"
+          class="search-input"
+          placeholder="Buscar por título o autor..."
+          value="{{ request.args.get('q', '') }}"
+        />
+        <button type="submit" class="btn-sm">Buscar</button>
+      </form>
+    </section>
+
+
+    
+    <section class="catalog-grid">
+      {% if libros %}
+        {% for libro in libros %}
+          <div class="ebook-card">
+            <img src="{{ url_for('static', filename=libro.portada) }}" alt="Portada {{ libro.titulo }}" />
+            <h3>{{ libro.titulo }}</h3>
+            <p>{{ libro.autor }}</p>
+            <a class="btn-sm" href="{{ libro.descarga }}" download>Descargar</a>
+          </div>
+        {% endfor %}
+      {% else %}
+        <p>No se encontraron libros para tu búsqueda.</p>
+      {% endif %}
+    </section>
+
+  </main>
+  <section class="contact" id="contacto">
+    <h2>Contacto</h2>
+    <p>¿Querés escribirnos, colaborar o hacer una sugerencia?</p>
+    <p>📧 <a href="mailto:hola@biblio.com">hola@biblio.com</a></p>
+  </section>
+  <footer>
+    <p>&copy; 2025 Biblio. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
+

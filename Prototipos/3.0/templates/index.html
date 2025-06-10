@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biblio – Tu biblioteca digital</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo"> <nav> <a href="{{ url_for('home') }}">📚 Biblio</a></nav></div>
+    <nav>
+      <a href="{{ url_for('catalogo') }}">Catálogo</a>
+      <a href="{{ url_for('suscripcion') }}">Suscribite</a>
+      <a href="{{ url_for('donacion') }}">Doná</a>
+      <a href="{{ url_for('login') }}">Login</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+
+  <section class="hero">
+    <h1>Leé ebooks gratis. Apoyá si querés. 🌱</h1>
+    <p>Explorá cientos de libros digitales, sin límites. Biblio es lectura autosustentable.</p>
+    <a class="btn" href="{{ url_for('catalogo') }}">Explorar Catálogo</a>
+  </section>
+
+  <section class="ebooks">
+    <h2>Ebooks destacados</h2>
+    <div class="grid">
+      {% for libro in libros %}
+        <div class="card">
+          <img src="{{ url_for('static', filename=libro.portada) }}" alt="Portada {{ libro.titulo }}" />
+          <h3>{{ libro.titulo }}</h3>
+          <p>{{ libro.autor }}</p>
+          <a class="btn-sm" href="{{ libro.descarga }}" download>Descargar</a>
+        </div>
+      {% endfor %}
+    </div>
+
+  </section>
+  <section class="about">
+    <div class="container">
+      <h2>Sobre nosotros</h2>
+      <p>
+        Biblio es una iniciativa independiente que busca democratizar el acceso a la lectura digital. Creemos en una cultura libre, donde cada persona pueda leer sin barreras. Ofrecemos ebooks gratuitos con un modelo basado en suscripciones opcionales y donaciones.
+      </p>
+      <p>
+        Si te gusta lo que hacemos, ayudanos a crecer compartiendo, donando o simplemente leyendo. 📚💙
+      </p>
+    </div>
+  </section>
+  <section class="contact" id="contacto">
+    <h2>Contacto</h2>
+    <p>¿Querés escribirnos, colaborar o hacer una sugerencia?</p>
+    <p>📧 <a href="mailto:hola@biblio.com">hola@biblio.com</a></p>
+  </section>
+    
+
+  <footer>
+    <p>&copy; 2025 Biblio — Tu biblioteca digital libre</p>
+  </footer>
+</body>
+</html>
